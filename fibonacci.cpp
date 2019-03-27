@@ -29,7 +29,7 @@ int main() {
 
 		if (input < 0) return 0;//종료
 
-		cout << "재귀함수를 사용하려면 0, 반복문을 사용하려면 다른 것을 입력" << endl;
+		cout << "재귀함수를 사용하려면 0을, 반복문을 사용하려면 1을 입력" << endl;
 		cout << "피보나치 수열 " << input << "번지의 값은 " << (_getch() == '0' ? RecursiveFunction(input) : RepetitiveFunction(input)) << endl;
 	}
 }
