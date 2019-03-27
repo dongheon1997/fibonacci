@@ -1,13 +1,14 @@
 #include <iostream>
 #include <conio.h>
+
 using namespace std;
 
-int RecursiveFunction(const int n) {//Àç±ÍÇÔ¼ö
+int RecursiveFunction(const int n) {//ìž¬ê·€í•¨ìˆ˜
 	if (n <= 1) return n;
 	return RecursiveFunction(n - 1) + RecursiveFunction(n - 2);
 }
 
-int RepetitiveFunction(const int n) {//¹Ýº¹¹®
+int RepetitiveFunction(const int n) {//ë°˜ë³µë¬¸
 	if (n <= 1) return n;
 	int now = 1;
 	int prev = 0;
@@ -23,12 +24,12 @@ int RepetitiveFunction(const int n) {//¹Ýº¹¹®
 int main() {
 	int input;
 	while (true) {
-		cout << "±¸ÇÏ°íÀÚ ÇÏ´Â °ªÀÇ ÇÇº¸³ªÄ¡ ¼ö¿­ÀÇ ¹øÁö (À½¼ö´Â Á¾·á) ¢Ñ ";
+		cout << "êµ¬í•˜ê³ ìž í•˜ëŠ” ê°’ì˜ í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì˜ ë²ˆì§€ (ìŒìˆ˜ëŠ” ì¢…ë£Œ) â˜ž ";
 		cin >> input;
 
-		if (input < 0) return 0;//Á¾·á
+		if (input < 0) return 0;//ì¢…ë£Œ
 
-		cout << "Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇÏ·Á¸é 0, ¹Ýº¹¹®À» »ç¿ëÇÏ·Á¸é ´Ù¸¥ °ÍÀ» ÀÔ·Â" << endl;
-		cout << "ÇÇº¸³ªÄ¡ ¼ö¿­ " << input << "¹øÁöÀÇ °ªÀº " << (_getch() == '0' ? RecursiveFunction(input) : RepetitiveFunction(input)) << endl;
+		cout << "ìž¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë ¤ë©´ 0, ë°˜ë³µë¬¸ì„ ì‚¬ìš©í•˜ë ¤ë©´ ë‹¤ë¥¸ ê²ƒì„ ìž…ë ¥" << endl;
+		cout << "í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ " << input << "ë²ˆì§€ì˜ ê°’ì€ " << (_getch() == '0' ? RecursiveFunction(input) : RepetitiveFunction(input)) << endl;
 	}
 }
