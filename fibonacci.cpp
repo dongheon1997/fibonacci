@@ -27,9 +27,10 @@ int main() {
 		cout << "구하고자 하는 값의 피보나치 수열의 번지 (음수는 종료) ☞ ";
 		cin >> input;
 
-		if (input < 0) return 0;//종료
+		if (input < 0) break;//종료
 
 		cout << "재귀함수를 사용하려면 0을, 반복문을 사용하려면 1을 입력" << endl;
-		cout << "피보나치 수열 " << input << "번지의 값은 " << (_getch() == '0' ? RecursiveFunction(input) : RepetitiveFunction(input)) << endl;
+		cout << "피보나치 수열 " << input << "번지의 값은 " << (_getch() == '0' ? RecursiveFunction(input) : RepetitiveFunction(input)) << endl << endl;
 	}
+	return 0;
 }
